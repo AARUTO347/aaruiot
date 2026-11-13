@@ -4,5 +4,6 @@
    contact channel still resolves if a platform assigns a different subdomain. */
 window.AARUIOT = {
   qoderUrl: '',
-  netlifyUrl: 'https://aaruiot.netlify.app'
+  netlifyUrl: 'https://aaruiot.netlify.app',
+  githubUrl: 'https://aaruto347.github.io/aaruiot/'
 };

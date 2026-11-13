@@ -569,9 +569,10 @@ $('#form-reset').addEventListener('click', () => {
 
 /* ── Footer: year + live host badges ─────────────────────── */
 $('#year').textContent = new Date().getFullYear();
-const hq = $('#host-qoder'), hn = $('#host-netlify');
+const hq = $('#host-qoder'), hn = $('#host-netlify'), hg = $('#host-gh');
 if (CFG.qoderUrl) hq.href = CFG.qoderUrl; else hq.style.display = 'none';
 if (CFG.netlifyUrl) hn.href = CFG.netlifyUrl; else hn.style.display = 'none';
+if (CFG.githubUrl) hg.href = CFG.githubUrl;
 
 /* ── Ignition ────────────────────────────────────────────── */
 loadGitHub();
