@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AARUIOT — Applied AI, Robotics, Unified Interfaces &amp; Open Technologies</title>
+<meta name="description" content="AARUIOT is an engineering & R&D company bridging intelligence, hardware, and human control — universal microcontroller libraries, autonomous robotics, custom HIDs and applied edge-AI.">
+<meta name="theme-color" content="#05070f">
+<meta property="og:title" content="AARUIOT — Bridging Intelligence, Hardware, and Human Control">
+<meta property="og:description" content="Applied AI, Robotics, Unified Interfaces & Open Technologies. One ecosystem, from silicon to human control.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aaruiot.netlify.app/">
+<meta property="og:image" content="https://aaruiot.netlify.app/assets/img/rover.webp">
+<meta property="og:image:width" content="1536">
+<meta property="og:image:height" content="1024">
+<meta property="og:site_name" content="AARUIOT">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AARUIOT — Bridging Intelligence, Hardware, and Human Control">
+<meta name="twitter:description" content="Applied AI, Robotics, Unified Interfaces & Open Technologies. One ecosystem, from silicon to human control.">
+<meta name="twitter:image" content="https://aaruiot.netlify.app/assets/img/rover.webp">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Abhishek Aaruto Solanki">
+<link rel="canonical" href="https://aaruiot.netlify.app/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2300e5ff'/%3E%3Cstop offset='1' stop-color='%23ff2d95'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='6' y='6' width='52' height='52' rx='12' fill='%2305070f' stroke='url(%23g)' stroke-width='3'/%3E%3Cpath d='M36 12 L22 36 h9 L28 52 L44 27 h-9 Z' fill='url(%23g)'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+
+<!-- ══════════ BOOT SEQUENCE ══════════ -->
+<div id="boot" class="boot" aria-hidden="true">
+  <div class="boot-frame">
+    <div class="boot-head"><span class="boot-dot"></span> AARUIOT BIOS <span class="boot-ver">v2.6.1</span></div>
+    <pre id="boot-log" class="boot-log"></pre>
+    <div class="boot-bar"><span id="boot-fill"></span></div>
+    <button id="boot-skip" class="boot-skip" type="button">SKIP INTRO ▸</button>
+  </div>
+</div>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="aurora" aria-hidden="true"><i class="a1"></i><i class="a2"></i><i class="a3"></i></div>
+<div id="scroll-progress" aria-hidden="true"></div>
+
+<!-- ══════════ NAV ══════════ -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#hero" aria-label="AARUIOT home">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00e5ff"/><stop offset="1" stop-color="#ff2d95"/></linearGradient></defs><rect x="6" y="6" width="52" height="52" rx="12" fill="none" stroke="url(#bg1)" stroke-width="3"/><path d="M36 12 L22 36 h9 L28 52 L44 27 h-9 Z" fill="url(#bg1)"/></svg>
+      <span class="brand-word">AARU<em>IOT</em></span>
+    </a>
+    <nav class="nav-links" id="nav-links" aria-label="Primary">
+      <a href="#pillars" data-spy>Pillars</a>
+      <a href="#flagships" data-spy>Flagships</a>
+      <a href="#ecosystem" data-spy>Ecosystem</a>
+      <a href="#founder" data-spy>Founder</a>
+      <a href="#roadmap" data-spy>Roadmap</a>
+      <a href="#contact" data-spy>Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-ghost btn-sm" href="https://github.com/AARUTO347" target="_blank" rel="noopener">
+        <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        GitHub
+      </a>
+      <a class="btn btn-primary btn-sm" href="#contact">Start a project</a>
+      <button class="nav-burger" id="nav-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero" id="hero">
+  <canvas id="mesh" class="mesh" aria-hidden="true"></canvas>
+  <div class="hero-inner">
+    <p class="hero-eyebrow reveal">APPLIED AI · ROBOTICS · UNIFIED INTERFACES · OPEN TECHNOLOGIES</p>
+    <h1 class="hero-title reveal" data-d="1">AARU<span class="grad">IOT</span></h1>
+    <p class="hero-tag reveal" data-d="2">Bridging Intelligence, Hardware, and Human Control.</p>
+    <p class="hero-sub reveal" data-d="3">An engineering &amp; R&amp;D company building unified hardware–software ecosystems — universal microcontroller abstraction, autonomous robotics, custom human-interface devices and applied edge-AI, under one clean API.</p>
+    <div class="hero-cta reveal" data-d="4">
+      <a class="btn btn-primary" href="#flagships">Explore the ecosystem <span aria-hidden="true">→</span></a>
+      <a class="btn btn-ghost" href="#contact">Start a project</a>
+    </div>
+    <div class="hero-chips reveal" data-d="5" aria-label="Engineering divisions">
+      <span class="chip c-ai"><i></i>Applied AI &amp; Vision</span>
+      <span class="chip c-robo"><i></i>Autonomous Robotics</span>
+      <span class="chip c-iface"><i></i>Unified Interfaces</span>
+      <span class="chip c-open"><i></i>Open Tech &amp; IoT</span>
+    </div>
+  </div>
+  <div class="float-card fc-ai" data-depth="26" aria-hidden="true"><b>VISION</b><span>hand-joint kinematics</span><em>MediaPipe · OpenCV</em></div>
+  <div class="float-card fc-robo" data-depth="40" aria-hidden="true"><b>SLAM</b><span>360° LiDAR navigation</span><em>ROS · Jetson</em></div>
+  <div class="float-card fc-iface" data-depth="18" aria-hidden="true"><b>ONE API</b><span>18,000+ components</span><em>AARUESP · AARUARDUINO</em></div>
+  <div class="float-card fc-open" data-depth="32" aria-hidden="true"><b>TELEMETRY</b><span>realtime WebSocket mesh</span><em>async embedded OS</em></div>
+  <a class="scroll-cue" href="#stats" aria-label="Scroll to content"><span></span></a>
+</section>
+
+<!-- ══════════ TECH MARQUEE ══════════ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>C++</span><i>◆</i><span>PYTHON</span><i>◆</i><span>PLATFORMIO</span><i>◆</i><span>ARDUINO</span><i>◆</i><span>ESP32 / ESP8266</span><i>◆</i><span>NVIDIA JETSON</span><i>◆</i><span>ROS / LIDAR</span><i>◆</i><span>OPENCV</span><i>◆</i><span>MEDIAPIPE</span><i>◆</i><span>PYSIDE6</span><i>◆</i><span>FLASK</span><i>◆</i><span>CUSTOM PCB DESIGN</span><i>◆</i><span>BLE HID</span><i>◆</i><span>WEBSOCKETS</span><i>◆</i>
+    <span>C++</span><i>◆</i><span>PYTHON</span><i>◆</i><span>PLATFORMIO</span><i>◆</i><span>ARDUINO</span><i>◆</i><span>ESP32 / ESP8266</span><i>◆</i><span>NVIDIA JETSON</span><i>◆</i><span>ROS / LIDAR</span><i>◆</i><span>OPENCV</span><i>◆</i><span>MEDIAPIPE</span><i>◆</i><span>PYSIDE6</span><i>◆</i><span>FLASK</span><i>◆</i><span>CUSTOM PCB DESIGN</span><i>◆</i><span>BLE HID</span><i>◆</i><span>WEBSOCKETS</span><i>◆</i>
+  </div>
+</div>
+
+<!-- ══════════ STATS ══════════ -->
+<section class="stats" id="stats">
+  <div class="wrap stats-grid">
+    <div class="stat reveal"><b><span class="count" data-count="18000">0</span>+</b><span>components unified under one API</span></div>
+    <div class="stat reveal" data-d="1"><b><span class="count" data-count="200">0</span>+</b><span>ESP32 / ESP8266 boards supported</span></div>
+    <div class="stat reveal" data-d="2"><b><span class="count" id="repo-count" data-count="14">0</span></b><span>public repositories on GitHub</span></div>
+    <div class="stat reveal" data-d="3"><b><span class="count" data-count="4">0</span></b><span>engineering pillars, one ecosystem</span></div>
+  </div>
+</section>
+
+<!-- ══════════ PILLARS ══════════ -->
+<section class="section" id="pillars">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="sec-kicker">// CORE ENGINEERING</p>
+      <h2>Four pillars. <span class="grad">One nervous system.</span></h2>
+      <p class="sec-lede">Every AARUIOT product shares the same DNA — perception, motion, control and connectivity designed as a single stack, not bolted together after the fact.</p>
+    </header>
+    <div class="pillar-grid">
+      <article class="pillar p-ai reveal" data-tilt>
+        <div class="pillar-top"><span class="pillar-num">01</span>
+          <svg class="pillar-ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M4 24s7-12 20-12 20 12 20 12-7 12-20 12S4 24 4 24Z" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="24" cy="24" r="6.5" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="24" cy="24" r="2.4" fill="currentColor"/><path d="M24 4v5M24 39v5M4 24h-0M44 24h4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Applied AI &amp; Vision</h3>
+        <p>Real-time computer vision, hand-joint kinematics tracking, multi-modal security verification and interactive voice-driven AI agents — running at the edge, not in a distant cloud.</p>
+        <ul class="tags"><li>OpenCV</li><li>MediaPipe</li><li>Jetson</li><li>Voice agents</li><li>Edge AI</li></ul>
+      </article>
+      <article class="pillar p-robo reveal" data-d="1" data-tilt>
+        <div class="pillar-top"><span class="pillar-num">02</span>
+          <svg class="pillar-ico" viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="18" width="32" height="16" rx="4" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="15" cy="38" r="4.5" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="33" cy="38" r="4.5" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M24 18V9m0 0a4 4 0 1 0-.1 0Z" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M14 26h6m8 0h6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Autonomous Robotics</h3>
+        <p>High-torque mobile rovers with 2D 360° LiDAR SLAM navigation, depth-camera perception, edge-compute integration and custom high-current power-distribution PCBs.</p>
+        <ul class="tags"><li>LiDAR SLAM</li><li>ROS</li><li>Depth cams</li><li>Power PCBs</li><li>Rovers</li></ul>
+      </article>
+      <article class="pillar p-iface reveal" data-d="2" data-tilt>
+        <div class="pillar-top"><span class="pillar-num">03</span>
+          <svg class="pillar-ico" viewBox="0 0 48 48" aria-hidden="true"><rect x="12" y="12" width="24" height="24" rx="4" fill="none" stroke="currentColor" stroke-width="2.5"/><rect x="19" y="19" width="10" height="10" rx="2" fill="currentColor"/><path d="M18 12V5m6 7V5m6 7V5M18 43v-7m6 7v-7m6 7v-7M12 18H5m7 6H5m7 6H5M43 18h-7m7 6h-7m7 6h-7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Unified Interfaces &amp; Firmware</h3>
+        <p>Zero-dependency, multi-architecture hardware libraries — <b>AARUESP</b> and <b>AARUARDUINO</b> — unifying 18,000+ sensors, displays and protocols under one clean API, alongside custom BLE HID controllers.</p>
+        <ul class="tags"><li>AARUESP</li><li>AARUARDUINO</li><li>BLE HID</li><li>AVR · Renesas</li><li>One API</li></ul>
+      </article>
+      <article class="pillar p-open reveal" data-d="3" data-tilt>
+        <div class="pillar-top"><span class="pillar-num">04</span>
+          <svg class="pillar-ico" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17" fill="none" stroke="currentColor" stroke-width="2.5"/><ellipse cx="24" cy="24" rx="8" ry="17" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M7 24h34M9.5 15h29M9.5 33h29" stroke="currentColor" stroke-width="2.5"/></svg>
+        </div>
+        <h3>Open Technologies &amp; IoT</h3>
+        <p>Asynchronous embedded OS frameworks, real-time WebSocket telemetry and self-hosted developer &amp; automation infrastructure — open building blocks for connected machines.</p>
+        <ul class="tags"><li>Async OS</li><li>WebSockets</li><li>Telemetry</li><li>Self-hosted</li><li>Automation</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FLAGSHIPS ══════════ -->
+<section class="section section-alt" id="flagships">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="sec-kicker">// FLAGSHIP PROJECTS</p>
+      <h2>Built to ship, <span class="grad">not to demo.</span></h2>
+      <p class="sec-lede">The flagship programs where the four pillars meet physical hardware — live open-source libraries and in-house R&amp;D platforms.</p>
+    </header>
+    <div class="flag-grid">
+      <article class="flag flag-code f-iface reveal" data-tilt>
+        <div class="flag-head"><span class="flag-badge">OPEN SOURCE</span><span class="flag-lang" data-repo-lang="AARUESP">C++</span></div>
+        <h3>AARUESP</h3>
+        <p>Universal hardware abstraction for ESP32 / ESP8266 — <b>18,000+</b> sensors, actuators and protocols across <b>200+</b> boards, driven by one clean, zero-dependency API.</p>
+        <div class="flag-stats"><span data-repo-stars="AARUESP">★ —</span><span data-repo-updated="AARUESP">updated —</span></div>
+        <div class="flag-links"><a href="https://github.com/AARUTO347/AARUESP" target="_blank" rel="noopener">Repository ↗</a><a href="#ecosystem">Ecosystem ↓</a></div>
+      </article>
+      <article class="flag flag-code f-iface reveal" data-d="1" data-tilt>
+        <div class="flag-head"><span class="flag-badge">OPEN SOURCE</span><span class="flag-lang" data-repo-lang="AARUARDUINO">C++</span></div>
+        <h3>AARUARDUINO</h3>
+        <p>Cross-architecture unified embedded framework for <b>AVR, MegaAVR and Renesas</b> — 1,000+ modules with a single consistent API and a live documentation site.</p>
+        <div class="flag-stats"><span data-repo-stars="AARUARDUINO">★ —</span><span data-repo-updated="AARUARDUINO">updated —</span></div>
+        <div class="flag-links"><a href="https://github.com/AARUTO347/AARUARDUINO" target="_blank" rel="noopener">Repository ↗</a><a href="https://aaruto347.github.io/AARUARDUINO/" target="_blank" rel="noopener">Live docs ↗</a></div>
+      </article>
+      <article class="flag flag-img f-robo reveal" data-d="2" data-tilt>
+        <img src="assets/img/rover.webp" alt="AARUIOT autonomous rover with LiDAR dome and glowing power-distribution PCB" loading="lazy">
+        <div class="flag-body">
+          <div class="flag-head"><span class="flag-badge badge-rd">IN R&amp;D</span></div>
+          <h3>Autonomous Rover &amp; SLAM Stack</h3>
+          <p>All-terrain mobile robotics platform powered by 2D 360° LiDAR, depth cameras and edge-AI compute — with custom high-current power distribution.</p>
+          <div class="flag-links"><a href="#contact">Collaborate ↗</a></div>
+        </div>
+      </article>
+      <article class="flag flag-img f-ai reveal" data-d="3" data-tilt>
+        <img src="assets/img/vision.webp" alt="Hand-joint kinematics tracking rendered as glowing magenta wireframe" loading="lazy">
+        <div class="flag-body">
+          <div class="flag-head"><span class="flag-badge badge-rd">IN R&amp;D</span></div>
+          <h3>BioHand AI &amp; Custom BLE HIDs</h3>
+          <p>Real-time vision-to-kinematics robotic control and standalone wireless gaming / control interfaces — your hand becomes the controller.</p>
+          <div class="flag-links"><a href="#contact">Collaborate ↗</a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ ECOSYSTEM ══════════ -->
+<section class="section" id="ecosystem">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="sec-kicker">// OPEN ECOSYSTEM · LIVE FROM GITHUB</p>
+      <h2>The whole lab, <span class="grad">in the open.</span></h2>
+      <p class="sec-lede">Operating systems, smart gardens, chat engines, games and answer engines — every public repository, synced live from <a href="https://github.com/AARUTO347" target="_blank" rel="noopener">@AARUTO347</a>.</p>
+    </header>
+    <div class="eco-filters reveal" role="group" aria-label="Filter repositories">
+      <button class="eco-chip is-on" data-filter="all" type="button">All</button>
+      <button class="eco-chip" data-filter="hardware" type="button">Hardware &amp; Firmware</button>
+      <button class="eco-chip" data-filter="ai" type="button">AI &amp; Chat</button>
+      <button class="eco-chip" data-filter="games" type="button">Games</button>
+      <button class="eco-chip" data-filter="os" type="button">OS &amp; IoT</button>
+    </div>
+    <div class="eco-grid" id="eco-grid" aria-live="polite"></div>
+    <p class="eco-note" id="eco-note">Fetching live repository data from GitHub…</p>
+  </div>
+</section>
+
+<!-- ══════════ FOUNDER ══════════ -->
+<section class="section section-founder" id="founder">
+  <div class="wrap founder-grid">
+    <div class="founder-media reveal">
+      <figure class="founder-frame">
+        <img src="assets/img/founder.webp" alt="Engineer at a workbench building a rover, surrounded by code and LiDAR maps" loading="lazy">
+        <figcaption>Abhishek “AARUTO” Solanki — founder, engineer, builder.</figcaption>
+      </figure>
+      <div class="founder-links">
+        <a class="btn btn-ghost btn-sm" href="https://github.com/AARUTO347" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="btn btn-ghost btn-sm" href="https://www.linkedin.com/in/abhishek-solanki-7bb239407/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </div>
+    <div class="founder-story">
+      <header class="sec-head reveal">
+        <p class="sec-kicker">// THE FOUNDER STORY</p>
+        <h2>From a blinking LED <span class="grad">to a living machine.</span></h2>
+      </header>
+      <div class="chapter reveal">
+        <h4>01 · The spark</h4>
+        <p>It started the way most obsessions do — with a board that wouldn't blink. Abhishek Aaruto Solanki spent his nights reverse-engineering kernels, building custom Linux distributions and teaching himself how machines think from the metal up. Every failed flash, every kernel panic, every 2&nbsp;a.m. breakthrough became fuel.</p>
+      </div>
+      <div class="chapter reveal">
+        <h4>02 · The friction</h4>
+        <p>Then came robotics — and with it, the pain every embedded builder knows: a thousand libraries, a thousand APIs, none of them speaking the same language. Instead of accepting it, he wrote <b>AARUARDUINO</b> and <b>AARUESP</b>: one clean API over thousands of sensors, displays and protocols, so the next builder wouldn't have to fight the same war.</p>
+      </div>
+      <div class="chapter reveal">
+        <h4>03 · The machine wakes up</h4>
+        <p>The first rover that mapped a room on its own. The first time a camera read his hand and the machine <em>obeyed</em>. That was the moment AARUIOT became inevitable — intelligence, hardware and human control were never meant to live in separate silos. They were meant to ship as one product.</p>
+      </div>
+      <blockquote class="founder-quote reveal">
+        “I don't want to write code that only lives on a screen. I want to build things that move, see, and answer when a human reaches out — and make that power available to everyone.”
+        <cite>— Abhishek Aaruto Solanki</cite>
+      </blockquote>
+      <ol class="timeline reveal">
+        <li><b>Nov 2025</b><span>First public repos — kernels, OS builds, game experiments.</span></li>
+        <li><b>2026</b><span>AARUARDUINO &amp; AARUESP unify thousands of components under one API.</span></li>
+        <li><b>2026</b><span>Rover + LiDAR SLAM stack and BioHand vision control enter R&amp;D.</span></li>
+        <li><b>Nov 2026</b><span>AARUIOT is founded — applied AI, robotics, unified interfaces, open technologies.</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ ROADMAP ══════════ -->
+<section class="section section-alt" id="roadmap">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="sec-kicker">// WHAT'S NEXT</p>
+      <h2>The roadmap is <span class="grad">already moving.</span></h2>
+      <p class="sec-lede">A glimpse of what the lab is building next. Timelines are targets, not promises — hardware ships when it's right.</p>
+    </header>
+    <div class="road-grid">
+      <article class="road reveal" data-tilt>
+        <span class="road-status st-rd">IN R&amp;D</span>
+        <h3>Rover Development Kit</h3>
+        <p>An open, hackable rover platform with SLAM out of the box — LiDAR, depth camera and edge compute on a documented power PCB.</p>
+        <span class="road-tag t-robo">Robotics</span>
+      </article>
+      <article class="road reveal" data-d="1" data-tilt>
+        <span class="road-status st-proto">PROTOTYPE</span>
+        <h3>BioHand Wireless Controller</h3>
+        <p>A standalone BLE HID with on-device gesture AI — control games, rovers and desktops with nothing but your hand.</p>
+        <span class="road-tag t-ai">Applied AI</span>
+      </article>
+      <article class="road reveal" data-d="2" data-tilt>
+        <span class="road-status st-design">IN DESIGN</span>
+        <h3>AARUESP Component Registry</h3>
+        <p>A community registry for the 18,000+ component ecosystem — one-line installs, verified drivers, versioned pin maps.</p>
+        <span class="road-tag t-iface">Interfaces</span>
+      </article>
+      <article class="road reveal" data-d="3" data-tilt>
+        <span class="road-status st-plan">PLANNED</span>
+        <h3>AARUIOT Telemetry Cloud</h3>
+        <p>Self-hostable realtime fleet telemetry — WebSocket dashboards, OTA updates and automation hooks for every connected build.</p>
+        <span class="road-tag t-open">Open Tech</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CONTACT ══════════ -->
+<section class="section" id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-intro">
+      <header class="sec-head reveal">
+        <p class="sec-kicker">// OPEN A CHANNEL</p>
+        <h2>Let's build something <span class="grad">that moves.</span></h2>
+        <p class="sec-lede">Product builds, partnerships, open-source collaboration or press — send a signal and it lands directly in the lab's inbox.</p>
+      </header>
+      <ul class="contact-cards reveal">
+        <li><span class="cc-ico" aria-hidden="true">✉</span><div><b>Email</b><a href="mailto:aaruto00@gmail.com">aaruto00@gmail.com</a></div></li>
+        <li><span class="cc-ico" aria-hidden="true">⌥</span><div><b>GitHub</b><a href="https://github.com/AARUTO347" target="_blank" rel="noopener">@AARUTO347</a></div></li>
+        <li><span class="cc-ico" aria-hidden="true">in</span><div><b>LinkedIn</b><a href="https://www.linkedin.com/in/abhishek-solanki-7bb239407/" target="_blank" rel="noopener">Abhishek Solanki</a></div></li>
+      </ul>
+      <p class="contact-note reveal">Typical response time: <b>within 48 hours</b>.</p>
+    </div>
+    <form id="contact-form" class="contact-form reveal" name="contact" method="POST" netlify-honeypot="website" novalidate>
+      <input type="hidden" name="form-name" value="contact">
+      <p class="hp" aria-hidden="true"><label>Leave this field empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label></p>
+      <div class="field">
+        <label for="cf-name">Name</label>
+        <input id="cf-name" name="name" type="text" autocomplete="name" required maxlength="120" placeholder="Ada Lovelace">
+        <small class="err" data-err="name"></small>
+      </div>
+      <div class="field">
+        <label for="cf-email">Email</label>
+        <input id="cf-email" name="email" type="email" autocomplete="email" required maxlength="160" placeholder="you@company.com">
+        <small class="err" data-err="email"></small>
+      </div>
+      <div class="field">
+        <label for="cf-topic">Topic</label>
+        <select id="cf-topic" name="topic" required>
+          <option value="" selected disabled>Choose a channel…</option>
+          <option>Product build</option>
+          <option>Partnership</option>
+          <option>Open-source collaboration</option>
+          <option>Press &amp; media</option>
+          <option>Something else</option>
+        </select>
+        <small class="err" data-err="topic"></small>
+      </div>
+      <div class="field">
+        <label for="cf-message">Message</label>
+        <textarea id="cf-message" name="message" rows="5" required minlength="10" maxlength="4000" placeholder="Tell us what you want to build…"></textarea>
+        <small class="err" data-err="message"></small>
+      </div>
+      <button class="btn btn-primary btn-block" id="cf-submit" type="submit"><span class="btn-label">Transmit message</span><span class="btn-spin" aria-hidden="true"></span></button>
+      <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      <div class="form-success" id="form-success" hidden>
+        <b>✓ Signal received.</b>
+        <p>Your message is in the lab inbox. Reference: <code id="ref-id">—</code></p>
+        <button class="btn btn-ghost btn-sm" id="form-reset" type="button">Send another</button>
+      </div>
+    </form>
+    <!-- Netlify form detection fallback (static hosts) -->
+    <form name="contact" netlify netlify-honeypot="website" hidden aria-hidden="true">
+      <input type="text" name="name"><input type="email" name="email"><input type="text" name="topic"><textarea name="message"></textarea><input type="text" name="website">
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="brand-word big">AARU<em>IOT</em></span>
+        <p>Applied AI, Robotics, Unified Interfaces &amp; Open Technologies.</p>
+        <p class="footer-tag">Bridging Intelligence, Hardware, and Human Control.</p>
+      </div>
+      <nav class="footer-col" aria-label="Explore">
+        <b>Explore</b>
+        <a href="#pillars">Pillars</a><a href="#flagships">Flagships</a><a href="#ecosystem">Ecosystem</a><a href="#founder">Founder</a><a href="#roadmap">Roadmap</a>
+      </nav>
+      <nav class="footer-col" aria-label="Connect">
+        <b>Connect</b>
+        <a href="https://github.com/AARUTO347" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/abhishek-solanki-7bb239407/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:aaruto00@gmail.com">Email</a>
+        <a href="#contact">Contact form</a>
+      </nav>
+      <div class="footer-col">
+        <b>Deployed on</b>
+        <span class="host-badges">
+          <a id="host-qoder" href="#" target="_blank" rel="noopener">Qoder Sites</a>
+          <a id="host-gh" href="https://aaruto347.github.io/aaruiot/" target="_blank" rel="noopener">GitHub Pages</a>
+          <a id="host-netlify" href="#" target="_blank" rel="noopener">Netlify</a>
+        </span>
+        <span class="made-by">⚡ MADE BY AARUTO</span>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>© <span id="year">2026</span> AARUIOT · All systems nominal.</span>
+      <span>Built with Qoder · <a href="https://qoder.com" target="_blank" rel="noopener">qoder.com</a></span>
+    </div>
+  </div>
+</footer>
+
+<button id="to-top" type="button" aria-label="Back to top">↑</button>
+<script src="assets/js/config.js" defer></script>
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>
