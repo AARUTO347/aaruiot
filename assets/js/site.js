@@ -299,13 +299,14 @@ if (finePointer && !reduced) {
 
 /* ── Live GitHub data ────────────────────────────────────── */
 const GH_USER = 'AARUTO347';
-const GH_PUBLIC_TOTAL = 14;
+const GH_PUBLIC_TOTAL = 15;
 const LANG_COLORS = { 'C++': '#f34b7d', 'C': '#555', 'Python': '#3572A5', 'TypeScript': '#3178c6', 'JavaScript': '#f1e05a', 'Shell': '#89e051', 'HTML': '#e34c26', 'Nim': '#ffc200', 'CSS': '#563d7c' };
 const CATS = {
   AARUESP: ['hardware', 'Firmware'], AARUARDUINO: ['hardware', 'Firmware'], AARUNO: ['hardware', 'Hardware'],
   allxchat: ['ai', 'AI · Chat'], 'AARU_CHAT-BOT': ['ai', 'AI · Chat'],
   'morphic-ai-answer-engine-generative-ui': ['ai', 'AI · Chat'], 'AARUTO_ANIME.AI': ['ai', 'AI'],
   'AARUTO-animdustry': ['games', 'Game'], 'avocado-quest': ['games', 'Game'],
+  'EXPLORE-CRAFT': ['games', 'Game'],
   'aurora-os': ['os', 'OS'], smartgarden: ['os', 'IoT']
 };
 const CAT_COLORS = { hardware: '#a6ff3d', ai: '#ff2d95', games: '#ffb020', os: '#00e5ff' };
@@ -320,6 +321,7 @@ const FALLBACK_REPOS = [
   { name: 'AARUNO', description: 'AARUNO — embedded hardware project.', language: 'C++', stargazers_count: 0, html_url: 'https://github.com/AARUTO347/AARUNO', homepage: 'https://aaruto347.github.io/AARUNO/', pushed_at: '2026-09-12T00:00:00Z', fork: false },
   { name: 'AARUTO-animdustry', description: 'Revived Animdustry — anime gacha bullet-hell rhythm game (Nim/Fau).', language: 'Nim', stargazers_count: 0, html_url: 'https://github.com/AARUTO347/AARUTO-animdustry', homepage: '', pushed_at: '2026-09-01T00:00:00Z', fork: false },
   { name: 'avocado-quest', description: 'Avocado Quest — browser game.', language: 'JavaScript', stargazers_count: 0, html_url: 'https://github.com/AARUTO347/avocado-quest', homepage: '', pushed_at: '2026-08-22T00:00:00Z', fork: false },
+  { name: 'EXPLORE-CRAFT', description: 'EXPLORE-CRAFT — security-hardened, Windows-ready fork of Mindustry (automation tower-defense RTS). MADE BY AARUTO.', language: 'Java', stargazers_count: 0, html_url: 'https://github.com/AARUTO347/EXPLORE-CRAFT', homepage: '', pushed_at: '2026-08-15T00:00:00Z', fork: false },
   { name: 'AARUTO_ANIME.AI', description: 'ANIME.AI — anime-flavored AI experiments.', language: 'TypeScript', stargazers_count: 0, html_url: 'https://github.com/AARUTO347/AARUTO_ANIME.AI', homepage: '', pushed_at: '2026-08-10T00:00:00Z', fork: false }
 ];
 
